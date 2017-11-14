@@ -1,20 +1,20 @@
 [GitHub]: https://github.com
 
 
-#Git 101
+# Git 101
 
 [toc]
 
-##A quoi ça sert ?
+## A quoi ça sert ?
 
 
-###Présentation
+### Présentation
 
 Git est un logiciel de versioning. Il permet de peut garder la trace de toutes les modifications faites sur un code pour pouvoir s'y retrouver à tout moment. À chaque fois qu'on fait une série de modifications (créer un fichier, supprimer un fichier, modifier un texte dans un fichier, etc.),  on peut enregistrer ces modifs dans un commit.
 
 **Un commit correspond donc à une version du code à un instant t.**
 
-####Modèle distribué vs modèle centralisé
+#### Modèle distribué vs modèle centralisé
 
 - *Modèle centralisé* : un serveur central contrôle toute la base de code du logiciel. 
 - *Modèle distribué* : toutes les machines ont accès à la base de code, pas besoin de passer par un serveur central.  
@@ -25,10 +25,10 @@ Git est un modèle distribué, ce qui veut dire :
 * Possibilité de travailler sans être connecté
 
 <br>
-##Installation & Prise en Main
+## Installation & Prise en Main
 
 
-###Quelques rappels sur le shell:
+### Quelques rappels sur le shell:
 
 `man command` : obtenir l'aide
 <br>`pwd` : obtenir le current working directory
@@ -41,7 +41,7 @@ Git est un modèle distribué, ce qui veut dire :
 <br> &nbsp;&nbsp; `-a "AppNAme"` : spécifier l'application 
 <br> `mv file target` : couper-coller
 	
-###Configuration
+### Configuration
 
 `git config --global user.name "nom ou pseudo"`
 <br>`git config --global user.email "Votre@email.com"`
@@ -49,17 +49,17 @@ Git est un modèle distribué, ce qui veut dire :
 Pour vérifier que tout va bien, il suffit de relancer le shell
 et de taper `git`. Si l’installation a fonctionné, on doit voir du texte en anglais expliquant l’utilisation de Git.
 
-##Premiers pas
+## Premiers pas
 
-###Créer un répertoire (*repository*)
+### Créer un répertoire (*repository*)
 `git init` : activation du *repository* dans lequelon s'est préalablement placé.
 <br> `git add NomduFichier` : ajout d'un fichier à l'index du Git
 <br> &nbsp;&nbsp;`git add .` : ajout de tous les fichiers du dossier dans lequel on est (à utiliser avec modération)
 
-###Faire un commit
+### Faire un commit
 `git commit -m "titre modifié"` : enregistrement des modifications de la nouvelle version 
 
-###Lire le log
+### Lire le log
 
 La commande `git log`affiche toutes les commits effectués.
 
@@ -80,12 +80,12 @@ On a donc pour chaque commit:
 - sa date
 - sa description 
 
-###Mettre à jour un fichier déjà indexé 
+### Mettre à jour un fichier déjà indexé 
 
 `git commit -a -m "modifXXX"` met à jour tous les fichiers déjà indexés 
 `git status` : indique si des modifications ont été faites depuis le dernier commit  
 
-###Se positionner sur un commit donné
+### Se positionner sur un commit donné
 
 - Un commit passé  
 `git checkout SHA`
@@ -93,7 +93,7 @@ On a donc pour chaque commit:
 - Le commit le plus récent  
 `git checkout master`
 
-###Modifier un commit
+### Modifier un commit
 
 `git revert SHA` : n'annule pas le commit mais en fait un nouveau qui fait l'opération inverse du précédent 
 
@@ -102,9 +102,9 @@ On a donc pour chaque commit:
 `git reset --hard‌` : annule toutes les modifications depuis le dernier commit (tant qu'on n'a pas fait de nouveau commit)
 
 
-##Utilisation de Git avec Git-Hub
+## Utilisation de Git avec Git-Hub
 
-###GitHub, qu'est-ce que c'est ?
+### GitHub, qu'est-ce que c'est ?
 
 Lorsqu'on a travaillé sur un projet, il est important d'avoir un backup sur une autre machine. Une fois le code et les commits effectués, on les envoie sur un remote :
 
@@ -121,13 +121,13 @@ En plus de cela, Github permet de :
 - Proposer des modifications de code à d'autres repos en faisant des *pull requests*
 - Récupérer du code depuis un autre *repository*
 
-###GitHub, premiers pas
+### GitHub, premiers pas
 
-####Cloner un repository
+#### Cloner un repository
 
 `git clone lienFourniParGitHub` : permet de copier l'intégralité d'un répertoire hebergé par GitHub sur sa propre machie (NB: se placer dans le `wd` souhaité)
 
-####Pusher un repository créé sur Github
+#### Pusher un repository créé sur Github
 
 Il faut commencer par cloner un repo créé sur [GitHub][]. Une fois qu'on a fait les modifs et les commits souhaités, on les push avec la commande `git push origin master` ("envoie mes modifs sur la branche master de mon remote origin").
 
@@ -135,6 +135,8 @@ Quelques éléments :
 
 -  La branche *master* est la branche qui contient le code courant du repo [GitHub][].
 -  Le remote sur lequel est envoyé le code est appelé *origin* par défaut. Ici, ce remote est [GitHub][]. Si on avait plusieurs remote, on pourrait l'envoyer sur *ordi2* ou *telephone* par exemple.
+
+blabla
 
  
 
