@@ -1,15 +1,9 @@
 [GitHub]: https://github.com
 
-	
-###############################################################################
 
 #Git 101
 
-<br>
-
 [toc]
-
-<br>
 
 ##A quoi ça sert ?
 
@@ -36,7 +30,8 @@ Git est un modèle distribué, ce qui veut dire :
 
 ###Quelques rappels sur le shell:
 
-`pwd` : obtenir le current working directory
+`man command` : obtenir l'aide
+<br>`pwd` : obtenir le current working directory
 <br>`cd` : se déplacer dans l'arborescence
 <br>`mkdir` : créer un dossier
 <br>`touch` : créer un fichier
@@ -44,6 +39,7 @@ Git est un modèle distribué, ce qui veut dire :
 <br>`cat`  : lire un fichier
 <br>`open` : ouvrir un fichier 
 <br> &nbsp;&nbsp; `-a "AppNAme"` : spécifier l'application 
+<br> `mv file target` : couper-coller
 	
 ###Configuration
 
@@ -53,7 +49,6 @@ Git est un modèle distribué, ce qui veut dire :
 Pour vérifier que tout va bien, il suffit de relancer le shell
 et de taper `git`. Si l’installation a fonctionné, on doit voir du texte en anglais expliquant l’utilisation de Git.
 
-<br>	
 ##Premiers pas
 
 ###Créer un répertoire (*repository*)
@@ -107,7 +102,6 @@ On a donc pour chaque commit:
 `git reset --hard‌` : annule toutes les modifications depuis le dernier commit (tant qu'on n'a pas fait de nouveau commit)
 
 
-<br>
 ##Utilisation de Git avec Git-Hub
 
 ###GitHub, qu'est-ce que c'est ?
@@ -127,13 +121,20 @@ En plus de cela, Github permet de :
 - Proposer des modifications de code à d'autres repos en faisant des *pull requests*
 - Récupérer du code depuis un autre *repository*
 
-
 ###GitHub, premiers pas
 
 ####Cloner un repository
 
 `git clone lienFourniParGitHub` : permet de copier l'intégralité d'un répertoire hebergé par GitHub sur sa propre machie (NB: se placer dans le `wd` souhaité)
 
+####Pusher un repository créé sur Github
+
+Il faut commencer par cloner un repo créé sur [GitHub][]. Une fois qu'on a fait les modifs et les commits souhaités, on les push avec la commande `git push origin master` ("envoie mes modifs sur la branche master de mon remote origin").
+
+Quelques éléments :
+
+-  La branche *master* est la branche qui contient le code courant du repo [GitHub][].
+-  Le remote sur lequel est envoyé le code est appelé *origin* par défaut. Ici, ce remote est [GitHub][]. Si on avait plusieurs remote, on pourrait l'envoyer sur *ordi2* ou *telephone* par exemple.
 
  
 
